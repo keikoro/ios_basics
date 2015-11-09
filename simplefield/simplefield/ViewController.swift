@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var myField: UITextField!
+    
+    var fieldValue = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +31,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func getNumber() {
+        fieldValue = myField.text!
+    }
+    
     @IBAction func buttonPress(sender: UIButton) {
-        if (myLabel.text == "hello,") {
-            myLabel.text = "world!"
+        fieldValue = myField.text!
+        print(fieldValue)
+        
+        if (Int(fieldValue) == 0) {
+            myLabel.text = "zero"
+            myButton.setTitle("clicky", forState: .Normal)
+            
+        } else if (Int(fieldValue) == 1) {
+            myLabel.text = "one"
+            myButton.setTitle("clicky", forState: .Normal)
+            
         } else {
-            myLabel.text = "hello,"
+            myLabel.text = "nope"
+            myButton.setTitle("try again", forState: .Normal)
         }
     }
 

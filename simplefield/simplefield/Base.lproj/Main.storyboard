@@ -22,7 +22,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P2b-9T-0gv">
-                                <rect key="frame" x="180" y="174" width="120" height="65"/>
+                                <rect key="frame" x="170" y="174" width="130" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94884627287522716" green="0.96346275252525249" blue="0.69455526206463691" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
@@ -32,8 +32,8 @@
                                     <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aK9-0w-3R0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" id="vG4-MN-eHP">
-                                <rect key="frame" x="260" y="119" width="40" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="?" textAlignment="right" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" clearButtonMode="whileEditing" id="vG4-MN-eHP">
+                                <rect key="frame" x="170" y="120" width="130" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -44,6 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="myButton" destination="P2b-9T-0gv" id="vMd-E9-FOm"/>
+                        <outlet property="myField" destination="vG4-MN-eHP" id="lMo-eB-RKQ"/>
                         <outlet property="myLabel" destination="EDZ-GW-4K5" id="LLr-Uh-REo"/>
                     </connections>
                 </viewController>
