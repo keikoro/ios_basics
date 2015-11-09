@@ -1,9 +1,9 @@
 //
-//  AppDelegate.swift
-//  secondscreen
+//  ViewController.swift
+//  simplebutton
 //
-//  Created by Kay on 29/11/15.
-//  Copyright © 2015 KK. All rights reserved.
+//  Copyright (c) 2015 K Kollmann.
+//  All rights reserved.
 //
 
 import UIKit
