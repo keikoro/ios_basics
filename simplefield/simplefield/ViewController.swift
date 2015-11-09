@@ -14,8 +14,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var myField: UITextField!
     
-    var fieldValue = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,8 +29,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func getNumber() {
-        fieldValue = myField.text!
+    func getValue(myField: UITextField) -> String {
+        return myField.text!
     }
     
     func textFieldShouldReturn(myField: UITextField) -> Bool {
@@ -41,24 +39,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonPress(sender: UIButton) {
-        fieldValue = myField.text!
-        print(fieldValue)
-        
-        textFieldShouldReturn(myField)
-        
-        if (Int(fieldValue) == 0) {
-            myLabel.text = "zero"
-            myButton.setTitle("clicky", forState: .Normal)
+       
+        if let fieldValue = Int(getValue(myField)) {
+            textFieldShouldReturn(myField)
+            print(fieldValue)
             
-        } else if (Int(fieldValue) == 1) {
-            myLabel.text = "one"
-            myButton.setTitle("clicky", forState: .Normal)
-            
+            if (fieldValue == 0) {
+                myLabel.text = "zero"
+                myButton.setTitle("clicky", forState: .Normal)
+                
+            } else if (fieldValue == 1) {
+                myLabel.text = "one"
+                myButton.setTitle("clicky", forState: .Normal)
+                
+            } else {
+                myLabel.text = "nope"
+                myButton.setTitle("try again", forState: .Normal)
+            }
         } else {
+            print("invalid value entered")
             myLabel.text = "nope"
             myButton.setTitle("try again", forState: .Normal)
         }
     }
-
 }
 
