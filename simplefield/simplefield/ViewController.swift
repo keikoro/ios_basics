@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myButton: UIButton!
@@ -35,9 +35,16 @@ class ViewController: UIViewController {
         fieldValue = myField.text!
     }
     
+    func textFieldShouldReturn(myField: UITextField) -> Bool {
+        myField.resignFirstResponder()
+        return true
+    }
+    
     @IBAction func buttonPress(sender: UIButton) {
         fieldValue = myField.text!
         print(fieldValue)
+        
+        textFieldShouldReturn(myField)
         
         if (Int(fieldValue) == 0) {
             myLabel.text = "zero"

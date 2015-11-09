@@ -32,12 +32,15 @@
                                     <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aK9-0w-3R0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="?" textAlignment="right" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" clearButtonMode="whileEditing" id="vG4-MN-eHP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="?" textAlignment="right" adjustsFontSizeToFit="NO" clearButtonMode="whileEditing" id="vG4-MN-eHP">
                                 <rect key="frame" x="170" y="120" width="130" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="c7g-3x-gdk"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
