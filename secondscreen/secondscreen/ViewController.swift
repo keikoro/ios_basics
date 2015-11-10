@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  simplebutton
+//  secondscreen
 //
 //  Copyright (c) 2015 K Kollmann.
 //  All rights reserved.
@@ -43,24 +43,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if let fieldValue = Int(getValue(myField)) {
             textFieldShouldReturn(myField)
             print(fieldValue)
-            
-            if (fieldValue == 0) {
-                myLabel.text = "zero"
-                myButton.setTitle("clicky", forState: .Normal)
-                
-            } else if (fieldValue == 1) {
-                myLabel.text = "one"
-                myButton.setTitle("clicky", forState: .Normal)
-                
-            } else {
-                myLabel.text = "nope"
-                myButton.setTitle("try again", forState: .Normal)
-            }
-        } else {
-            print("invalid value entered")
-            myLabel.text = "nope"
-            myButton.setTitle("try again", forState: .Normal)
         }
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if (segue.identifier == "mySegue") {
+            let second = segue.destinationViewController as! SecondScreenViewController
+            second.input = self.myField.text!
+        }
+    }
+    
 }
 
