@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  simplebutton
+//  secondscreen
 //
 //  Copyright (c) 2015 K Kollmann.
 //  All rights reserved.
