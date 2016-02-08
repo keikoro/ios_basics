@@ -1,6 +1,6 @@
 # simplefield
 
-A very basic iOS app consisting only of one label, one input field and one button... waiting for you to choose between 0 and 1.
+A very basic iOS app consisting of only one label, one input field and one button... waiting for you to choose between 0 and 1.
 
 ## Screenshots
 

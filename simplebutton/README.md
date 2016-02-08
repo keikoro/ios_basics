@@ -1,6 +1,6 @@
 # simplebutton
 
-A very basic iOS app consisting only of one label and one button... telling you what programming is all about.
+A very basic iOS app consisting of only one label and one button... telling you what programming is all about.
 
 ## Screenshots
 
