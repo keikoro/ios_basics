@@ -1,12 +1,35 @@
-# Mac general
-**.DS_Store
-**.Trashes
-**.swp
+# ----- Mac
+.DS_Store
 
-# Xcode
-**build/
-**DerivedData/
-**UserInterfaceState.xcuserstate
-**xcuserdata/
+# ----- env, config vars
+*.env
+**config**
+**var/**
+
+# ----- Files general
+*.log
+**cache**
+**local**
+**foo**
+**dist**
+**temp**
+**build
+*.sqlite
+
+
+# ----- Files PROJECT
+
+
+
+# ----- XCode
+**/UserInterfaceState.xcuserstate
+**/DerivedData/
+**/xcuserdata/
 **.moved-aside
 **~.nib
+**xcconfig
+
+# ----- Allow
+!**template**
+!**requirements.txt**
+!**runtime.txt**
